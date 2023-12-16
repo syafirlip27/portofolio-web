@@ -76,14 +76,16 @@
     height: 83vh;
     margin-bottom: 0;
 
+
   }
+  img
 
   article {
     font-size: 1rem;
   }
 
   footer nav {
-    height: fit-content;
+    height: 200px;
     margin-bottom: 2rem;
   }
 
@@ -121,8 +123,8 @@
   }
 
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 190px;
+    height: 200px;
     justify-content: center;
   }
 
@@ -136,5 +138,8 @@
 
   .text-container {
     text-align: justify;
+  }
+  #contact {
+    margin-top: 25%;
   }
 }
