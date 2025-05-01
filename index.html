@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title> Portfolio SyafirliPindaningtyas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -38,39 +39,50 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-1.png" alt="John Doe profile picture" />
+        <img src="./assets/img/profile-1.png" alt="Syafirli profile picture" />
       </div>
       
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Syafirli Pindaningtyas</h1>
+        <div class="overflow-hidden whitespace-nowrap">
+          <h1 class="inline-block animate-marquee text-4xl font-bold">
+            Syafirli Pindaningtyas
+          </h1>
+        </div>
+        
         <p class="section__text__p2">Frontend Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          <div class="flex gap-4">
+            <button
+              class="px-6 py-2 rounded-full border-2 border-black text-black font-semibold hover:bg-black hover:text-white transition"
+              onclick="window.open('./assets/resume.pdf')"
+            >
+              Download CV
+            </button>
+            <button
+              class="px-6 py-2 rounded-full bg-black text-white font-semibold hover:bg-gray-800 transition"
+              onclick="location.href='./#contact'"
+            >
+              Contact Info
+            </button>
+          </div>
+          
         </div>
         <div id="socials-container">
           <img
-            src="./assets/instagram.png"
+            src="./assets/icon/instagram.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://www.instagram.com/frisilyy_/ '"
           />
           <img
-            src="./assets/github.png"
+            src="./assets/icon/github.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/syafirlip27/'"
           />
           <img
-            src="./assets/linkedin.png"
+            src="./assets/icon/linkedin.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://www.linkedin.com/in/syafirli-pindaningtyas-257a46276/'"
@@ -82,185 +94,165 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
+       <div class="section-container">
+        <!-- <div class="section__pic-container">
           <img
             src="./assets/about-pic.jpg"
             alt="Profile picture"
             class="about-pic"
           />
-        </div>
+        </div> -->
         <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>Coming soon!<br />Frontend Developer</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Student at SMK Wikrama Bogor</p>
-            </div>
-          </div>
           <div class="text-container">
             <p>
-              I am Syafirli Pindaningtyas from SMK Wikrama Bogor majoring in Software Engineering, 
-              I have a hobby of experimenting on something i thinked of in coding mostly in the language JavaScript. 
-              I took a liking to something that has Korean culture like the foods or even music.
+              a motivated fresh <b>graduate</b> with a strong passion for 
+              <b>Frontend Development </b>and 
+              <b> UI/UX Design</b>. 
+              Skilled in building responsive, user-friendly web applications and designing intuitive, visually appealing interfaces. 
+              Experienced in using frameworks like 
+              Angular, React.js, and Laravel, and proficient in designing UI with 
+              Figma. 
             </p>
           </div>
+          <div class="about-containers">
+            
+            <div class="details-container p-6 border border-gray-400 rounded-2xl flex flex-col items-center">
+              <!-- Icon di tengah atas -->
+              <img
+                src="./assets/icon/experience.png"
+                alt="Experience icon"
+                class="w-6 h-6 mb-2"
+              />
+                <!-- Judul -->
+  <h3 class="font-semibold text-lg mb-4 text-center">Experience</h3>
+
+  <!-- Pengalaman -->
+  <div class="text-center">
+    <div class="mb-4">
+      <p class="font-medium">
+        Frontend Developer <span class="text-gray-500">• Kejar Bahasa</span>
+      </p>
+      <p class="text-sm text-gray-500 mb-1">
+        October 2024 - December 2024 | Bogor, Indonesia
+      </p>
+    </div>
+
+    <div>
+      <p class="font-medium">
+        Frontend Developer <span class="text-gray-500">• PT. Hexaon Business Mitrasindo</span>
+      </p>
+      <p class="text-sm text-gray-500 mb-1">
+        January 2024 - June 2024 | Jakarta Barat, Indonesia
+      </p>
+    </div>
+  </div>
+</div>
+            
+<div class="details-container p-6 border border-gray-400 rounded-2xl flex flex-col items-center text-center">
+  <!-- Icon di tengah atas -->
+  <img
+    src="./assets/icon/education.png"
+    alt="Education icon"
+    class="w-6 h-6 mb-2"
+  />
+
+  <!-- Judul -->
+  <h3 class="font-semibold text-lg mb-2">Education</h3>
+
+  <!-- Deskripsi -->
+  <p class="font-medium">
+    Software And Game Development <span class="text-gray-500">• SMK Wikrama Bogor</span>
+  </p>
+  <p class="text-sm text-gray-500 mb-1">
+    2022-2025
+  </p>
+</div>
+
+          </div>
         </div>
-      </div>
+      </div> 
       <img
-      src="./assets/arrow.png"
+      src="./assets/icon/arrow.png"
       alt="Arrow icon"
       class="icon arrow"
       onclick="location.href='./#experience'"
     />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Developer</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Vue js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
+    <section id="experience" class="py-10">
+      <p class="text-center text-sm text-gray-500">Explore My</p>
+      <h1 class="text-center text-3xl font-bold mb-8">Skills</h1>
+    
+      <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+        <!-- Frontend Developer -->
+        <div class="details-container p-6 border rounded-2xl w-full md:w-1/2">
+          <h2 class="font-semibold text-xl mb-4 text-center">Frontend Developer</h2>
+          <div class="grid grid-cols-2 gap-y-3 gap-x-6">
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>Angular</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>React.js</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>Laravel</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>JavaScript</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>TypeScript</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>PHP</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>TailwindCSS</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>Git</span>
             </div>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Developer</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GitHub</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Figma</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
+        </div>
+      
+        <!-- UI/UX Design -->
+        <div class="details-container p-6 border rounded-2xl w-full md:w-1/2">
+          <h2 class="font-semibold text-xl mb-4 text-center">UI/UX Design</h2>
+          <div class="grid grid-cols-2 gap-y-3 gap-x-6">
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>Figma</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>Responsive Web Design</span>
+            </div>
+            <div class="flex items-center gap-2 col-span-2">
+              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+              <span>User Research & Usability Testing</span>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      
+
+        <img
+          src="./assets/icon/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow cursor-pointer"
+          onclick="location.href='./#projects'"
+        />
+      
     </section>
+    
+    
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -269,12 +261,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/img/project-1.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project </h2>
+            <h2 class="experience-sub-title project-title">My first Personal Web </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -293,12 +285,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/img/project-2.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project </h2>
+            <h2 class="experience-sub-title project-title">E-commerce </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -318,12 +310,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/keterlambatan.png"
+                src="./assets/img/keterlambatan.png"
                 alt="Project 4"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project </h2>
+            <h2 class="experience-sub-title project-title">Rekap Keterlambatan </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -343,12 +335,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-5.png"
+                src="./assets/img/project-5.png"
                 alt="Project 5"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project </h2>
+            <h2 class="experience-sub-title project-title">Figma </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -367,12 +359,12 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-8.png"
+                src="./assets/img/project-8.png"
                 alt="Project 6"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project </h2>
+            <h2 class="experience-sub-title project-title">Figma </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -391,7 +383,175 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-7.png"
+                src="./assets/img/project-10.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">E-kasir </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/syafirlip27/UKK-syafirlipindaningtyas.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-11.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Plant Culture </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/syafirlip27/PC-UI.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-12.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">POS Broker </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-13.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Certificate</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-14.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Certificate </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-15.jpg"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Certificate</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-7.png"
+                alt="Project 8"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Certificate</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='#'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-16.png"
                 alt="Project 8"
                 class="project-img"
               />
@@ -421,15 +581,15 @@
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
+            src="./assets/icon/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:firlypinda02@gmail.com">firlypinda@gmail.com</a></p>
+          <p><a href="mailto:firlypinda02@gmail.com">firlypinda02@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/linkedin.png"
+            src="./assets/icon/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
