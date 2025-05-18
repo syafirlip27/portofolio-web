@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Portfolio SyafirliPindaningtyas</title>
+    <title>Portfolio SyafirliPindaningtyas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -37,22 +37,49 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/img/profile-1.png" alt="Syafirli profile picture" />
-      </div>
-      
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <div class="overflow-hidden whitespace-nowrap">
-          <h1 class="inline-block animate-marquee text-4xl font-bold">
-            Syafirli Pindaningtyas
-          </h1>
+
+    <section
+      id="profile"
+      class="relative py-16 px-4 sm:px-8 md:px-16 lg:px-32 bg-white overflow-hidden"
+    >
+      <img
+        src="./assets/img/ribbon.png"
+        alt="Ribbon kiri atas"
+        class="absolute top-0 left-0 w-44 sm:w-56 md:w-64 lg:w-80 z-0"
+      />
+      <img
+        src="./assets/img/ribbon.png"
+        alt="Ribbon kanan bawah"
+        class="absolute bottom-0 right-0 w-44 sm:w-56 md:w-64 lg:w-80 rotate-180 z-0"
+      />
+
+      <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+        <div class="flex justify-center md:justify-start w-full md:w-1/2">
+          <div
+            class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-300 shadow-xl transition-transform hover:scale-105 duration-300"
+          >
+            <img
+              src="./assets/img/profile-1.png"
+              alt="Syafirli profile picture"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
-        
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <div class="flex gap-4">
+
+        <!-- Teks -->
+        <div class="w-full text-center md:text-left space-y-4">
+          <p class="text-lg text-gray-500">Hello, I'm</p>
+          <h3
+            class="font-bold text-black typing-animation overflow-hidden whitespace-nowrap border-r-4 border-black text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl"
+          >
+            Syafirli Pindaningtyas
+          </h3>
+          <p class="text-xl text-gray-600 font-medium">Frontend Developer</p>
+
+          <!-- Tombol -->
+          <div
+            class="pt-4 flex flex-wrap justify-center md:justify-start gap-4"
+          >
             <button
               class="px-6 py-2 rounded-full border-2 border-black text-black font-semibold hover:bg-black hover:text-white transition"
               onclick="window.open('./assets/resume.pdf')"
@@ -66,537 +93,770 @@
               Contact Info
             </button>
           </div>
-          
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/icon/instagram.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://www.instagram.com/frisilyy_/ '"
-          />
-          <img
-            src="./assets/icon/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/syafirlip27/'"
-          />
-          <img
-            src="./assets/icon/linkedin.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/syafirli-pindaningtyas-257a46276/'"
-          />
+
+          <!-- Sosial Media -->
+          <div class="mt-6 flex justify-center md:justify-start gap-4">
+            <img
+              src="./assets/icon/instagram.png"
+              alt="Instagram"
+              class="icon w-6 h-6 cursor-pointer"
+              onclick="location.href='https://www.instagram.com/frisilyy_/'"
+            />
+            <img
+              src="./assets/icon/github.png"
+              alt="GitHub"
+              class="icon w-6 h-6 cursor-pointer"
+              onclick="location.href='https://github.com/syafirlip27/'"
+            />
+            <img
+              src="./assets/icon/linkedin.png"
+              alt="LinkedIn"
+              class="icon w-6 h-6 cursor-pointer"
+              onclick="location.href='https://www.linkedin.com/in/syafirli-pindaningtyas-257a46276/'"
+            />
+          </div>
         </div>
       </div>
-
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-       <div class="section-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        <div class="about-details-container">
-          <div class="text-container">
+
+    <section id="about" class="relative py-12 px-6 sm:px-12 lg:px-24 bg-white">
+      <!-- Ribbon kiri atas -->
+      <img
+        src="./assets/img/pita.png"
+        alt="Ribbon kiri atas"
+        class="absolute top-0 left-0 w-20 sm:w-24 md:w-32 lg:w-40 z-0"
+      />
+
+      <div class="text-center mb-8">
+        <p class="text-sm sm:text-base text-gray-600 mb-2">Get To Know More</p>
+        <h1 class="text-3xl sm:text-4xl font-bold">About Me</h1>
+      </div>
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+        <!-- Kalau mau pakai foto profil, uncomment bagian ini -->
+        <!--
+    <div class="flex-shrink-0">
+      <img
+        src="./assets/about-pic.jpg"
+        alt="Profile picture"
+        class="rounded-xl w-48 h-48 object-cover mx-auto md:mx-0"
+      />
+    </div>
+    -->
+
+        <div class="flex-1 flex flex-col gap-8">
+          <div class="text-base sm:text-lg text-gray-700 leading-relaxed">
             <p>
-              a motivated fresh <b>graduate</b> with a strong passion for 
-              <b>Frontend Development </b>and 
-              <b> UI/UX Design</b>. 
-              Skilled in building responsive, user-friendly web applications and designing intuitive, visually appealing interfaces. 
-              Experienced in using frameworks like 
-              Angular, React.js, and Laravel, and proficient in designing UI with 
-              Figma. 
+              A motivated fresh <b>graduate</b> with a strong passion for
+              <b>Frontend Development</b> and <b>UI/UX Design</b>. Skilled in
+              building responsive, user-friendly web applications and designing
+              intuitive, visually appealing interfaces. Experienced in using
+              frameworks like Angular, React.js, and Laravel, and proficient in
+              designing UI with Figma.
             </p>
           </div>
-          <div class="about-containers">
-            
-            <div class="details-container p-6 border border-gray-400 rounded-2xl flex flex-col items-center">
-              <!-- Icon di tengah atas -->
+
+          <div class="flex flex-col sm:flex-row gap-8">
+            <!-- Experience -->
+            <div
+              class="flex-1 p-6 border border-gray-300 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
               <img
                 src="./assets/icon/experience.png"
                 alt="Experience icon"
-                class="w-6 h-6 mb-2"
+                class="w-8 h-8 mb-3"
               />
-                <!-- Judul -->
-  <h3 class="font-semibold text-lg mb-4 text-center">Experience</h3>
+              <h3 class="font-semibold text-xl mb-4">Experience</h3>
 
-  <!-- Pengalaman -->
-  <div class="text-center">
-    <div class="mb-4">
-      <p class="font-medium">
-        Frontend Developer <span class="text-gray-500">• Kejar Bahasa</span>
-      </p>
-      <p class="text-sm text-gray-500 mb-1">
-        October 2024 - December 2024 | Bogor, Indonesia
-      </p>
-    </div>
+              <div
+                class="space-y-6 text-left w-full max-w-xs sm:max-w-none mx-auto"
+              >
+                <div>
+                  <p class="font-medium">
+                    Frontend Developer
+                    <span class="text-gray-500">• Kejar Bahasa</span>
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">
+                    October 2024 - December 2024 | Bogor, Indonesia
+                  </p>
+                </div>
 
-    <div>
-      <p class="font-medium">
-        Frontend Developer <span class="text-gray-500">• PT. Hexaon Business Mitrasindo</span>
-      </p>
-      <p class="text-sm text-gray-500 mb-1">
-        January 2024 - June 2024 | Jakarta Barat, Indonesia
-      </p>
-    </div>
-  </div>
-</div>
-            
-<div class="details-container p-6 border border-gray-400 rounded-2xl flex flex-col items-center text-center">
-  <!-- Icon di tengah atas -->
-  <img
-    src="./assets/icon/education.png"
-    alt="Education icon"
-    class="w-6 h-6 mb-2"
-  />
+                <div>
+                  <p class="font-medium">
+                    Frontend Developer
+                    <span class="text-gray-500"
+                      >• PT. Hexaon Business Mitrasindo</span
+                    >
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">
+                    January 2024 - June 2024 | Jakarta Barat, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
 
-  <!-- Judul -->
-  <h3 class="font-semibold text-lg mb-2">Education</h3>
+            <!-- Education -->
+            <div
+              class="flex-1 p-6 border border-gray-300 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <img
+                src="./assets/icon/education.png"
+                alt="Education icon"
+                class="w-8 h-8 mb-3"
+              />
+              <h3 class="font-semibold text-xl mb-3">Education</h3>
 
-  <!-- Deskripsi -->
-  <p class="font-medium">
-    Software And Game Development <span class="text-gray-500">• SMK Wikrama Bogor</span>
-  </p>
-  <p class="text-sm text-gray-500 mb-1">
-    2022-2025
-  </p>
-</div>
-
+              <p class="font-medium">
+                Software And Game Development
+                <span class="text-gray-500">• SMK Wikrama Bogor</span>
+              </p>
+              <p class="text-sm text-gray-500 mt-1">2022-2025</p>
+            </div>
           </div>
         </div>
-      </div> 
+      </div>
+
       <img
-      src="./assets/icon/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#experience'"
-    />
+        src="./assets/icon/arrow.png"
+        alt="Arrow icon"
+        class="cursor-pointer mt-12 mx-auto w-8 sm:w-10"
+        onclick="location.href='./#experience'"
+      />
     </section>
-    <section id="experience" class="py-10">
-      <p class="text-center text-sm text-gray-500">Explore My</p>
-      <h1 class="text-center text-3xl font-bold mb-8">Skills</h1>
-    
-      <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+
+    <section
+      id="experience"
+      class="relative py-12 px-6 sm:px-12 lg:px-24 bg-white"
+    >
+      <!-- Ribbon atas -->
+      <img
+        src="./assets/img/pita.png"
+        alt="Ribbon atas"
+        class="absolute top-0 left-0 w-20 sm:w-24 md:w-32 lg:w-40 z-0"
+      />
+
+      <img
+        src="./assets/img/pita.png"
+        alt="Ribbon kanan atas"
+        class="absolute top-0 right-0 w-20 sm:w-24 md:w-32 lg:w-40 z-0"
+      />
+
+      <div class="text-center mb-8 relative z-10">
+        <p class="text-sm sm:text-base text-gray-600 mb-2">Explore My</p>
+        <h1 class="text-3xl sm:text-4xl font-bold">Skills</h1>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 relative z-10"
+      >
         <!-- Frontend Developer -->
-        <div class="details-container p-6 border rounded-2xl w-full md:w-1/2">
-          <h2 class="font-semibold text-xl mb-4 text-center">Frontend Developer</h2>
-          <div class="grid grid-cols-2 gap-y-3 gap-x-6">
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+        <div
+          class="flex-1 p-6 border border-gray-300 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
+          <h2 class="font-semibold text-xl mb-6 text-center">
+            Frontend Developer
+          </h2>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-5">
+            <!-- Angular -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/angular.svg"
+                alt="Angular icon"
+                class="w-6 h-6"
+              />
               <span>Angular</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- React.js -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/react.svg"
+                alt="React icon"
+                class="w-6 h-6"
+              />
               <span>React.js</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- Laravel -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/laravel.svg"
+                alt="Laravel icon"
+                class="w-6 h-6"
+              />
               <span>Laravel</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- JavaScript -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/javascript.svg"
+                alt="JavaScript icon"
+                class="w-6 h-6"
+              />
               <span>JavaScript</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- TypeScript -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/typescript.svg"
+                alt="TypeScript icon"
+                class="w-6 h-6"
+              />
               <span>TypeScript</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- PHP -->
+            <div class="flex items-center gap-3">
+              <img src="./assets/icon/php.svg" alt="PHP icon" class="w-6 h-6" />
               <span>PHP</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- TailwindCSS -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/tailwindcss.svg"
+                alt="TailwindCSS icon"
+                class="w-6 h-6"
+              />
               <span>TailwindCSS</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- Git -->
+            <div class="flex items-center gap-3">
+              <img src="./assets/icon/git.svg" alt="Git icon" class="w-6 h-6" />
               <span>Git</span>
             </div>
           </div>
         </div>
-      
+
         <!-- UI/UX Design -->
-        <div class="details-container p-6 border rounded-2xl w-full md:w-1/2">
-          <h2 class="font-semibold text-xl mb-4 text-center">UI/UX Design</h2>
-          <div class="grid grid-cols-2 gap-y-3 gap-x-6">
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+        <div
+          class="flex-1 p-6 border border-gray-300 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
+        >
+          <h2 class="font-semibold text-xl mb-6 text-center">UI/UX Design</h2>
+          <div class="grid grid-cols-2 gap-x-8 gap-y-5">
+            <!-- Figma -->
+            <div class="flex items-center gap-3">
+              <img
+                src="./assets/icon/figma.svg"
+                alt="Figma icon"
+                class="w-6 h-6"
+              />
               <span>Figma</span>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- Responsive Web Design -->
+            <div class="flex items-center gap-3 col-span-2">
+              <img
+                src="./assets/icon/checkmark.png"
+                alt="Responsive icon"
+                class="w-6 h-6"
+              />
               <span>Responsive Web Design</span>
             </div>
-            <div class="flex items-center gap-2 col-span-2">
-              <img src="./assets/icon/checkmark.png" alt="check" class="w-4 h-4" />
+            <!-- User Research & Usability Testing -->
+            <div class="flex items-center gap-3 col-span-2">
+              <img
+                src="./assets/icon/checkmark.png"
+                alt="User Research icon"
+                class="w-6 h-6"
+              />
               <span>User Research & Usability Testing</span>
             </div>
           </div>
         </div>
       </div>
-      
 
-        <img
-          src="./assets/icon/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow cursor-pointer"
-          onclick="location.href='./#projects'"
-        />
-      
+      <img
+        src="./assets/icon/arrow.png"
+        alt="Arrow icon"
+        class="cursor-pointer mt-12 mx-auto w-8 sm:w-10"
+        onclick="location.href='./#projects'"
+      />
     </section>
-    
-    
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="project-details-container">
-        <div class="project-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">My first Personal Web </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/syafirlip27/syafirlip27'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://firlypinda.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-2.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">E-commerce </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/syafirlip27/project-kfood'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://projek-firly.000webhostapp.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-         
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/keterlambatan.png"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Rekap Keterlambatan </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-5.png"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Figma </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-8.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Figma </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-10.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">E-kasir </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/syafirlip27/UKK-syafirlipindaningtyas.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-11.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Plant Culture </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/syafirlip27/PC-UI.git'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-12.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">POS Broker </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-13.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Certificate</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-14.png"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Certificate </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-15.jpg"
-                alt="Project 6"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Certificate</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-7.png"
-                alt="Project 8"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Certificate</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/img/project-16.png"
-                alt="Project 8"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Certificate</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='#'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        
-    </section>
-    
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
+
+    <section id="projects" class="py-16 px-6 bg-white relative">
+      <p class="text-center text-sm text-gray-500">Browse My Recent</p>
+      <h1 class="text-center text-3xl font-bold mb-12">Projects</h1>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+      >
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
           <img
-            src="./assets/icon/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+            src="./assets/img/project-1.png"
+            alt="Project 1"
+            class="rounded-md w-full object-cover mb-4 h-48"
           />
-          <p><a href="mailto:firlypinda02@gmail.com">firlypinda02@gmail.com</a></p>
+          <h2 class="text-lg font-semibold mb-3 text-center">
+            My first Personal Web
+          </h2>
+          <div class="flex justify-center gap-4">
+            <!-- Tombol Github - solid -->
+            <a
+              href="https://github.com/syafirlip27/syafirlip27"
+              target="_blank"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+            >
+              Github
+            </a>
+
+            <!-- Tombol Live Demo - outline -->
+            <a
+              href="https://firlypinda.netlify.app/"
+              target="_blank"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
-        <div class="contact-info-container">
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
           <img
-            src="./assets/icon/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
+            src="./assets/img/project-2.png"
+            alt="Project 2"
+            class="rounded-md w-full object-cover mb-4 h-48"
           />
-          <p><a href="https://https://www.linkedin.com/in/syafirli-pindaningtyas-257a46276/">LinkedIn</a></p>
+          <h2 class="text-lg font-semibold mb-3 text-center">E-commerce</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="https://github.com/syafirlip27/project-kfood"
+              target="_blank"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="https://projek-firly.000webhostapp.com/"
+              target="_blank"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/keterlambatan.png"
+            alt="Project 3"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">
+            Rekap Keterlambatan
+          </h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-5.png"
+            alt="Project 4"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Figma</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-8.png"
+            alt="Project 5"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Figma</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-10.png"
+            alt="Project 6"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">E-kasir</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="https://github.com/syafirlip27/UKK-syafirlipindaningtyas.git"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-11.png"
+            alt="Project 7"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Plant Culture</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="https://github.com/syafirlip27/PC-UI.git"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-12.png"
+            alt="Project 8"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">POS Broker</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-13.png"
+            alt="Project 9"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-14.png"
+            alt="Project 10"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              class="btn btn-color-2"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-15.jpg"
+            alt="Project 11"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-7.png"
+            alt="Project 12"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-16.png"
+            alt="Project 13"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-17.png"
+            alt="Project 13"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-3.png"
+            alt="Project 13"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-18.png"
+            alt="Project 13"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+        >
+          <img
+            src="./assets/img/project-19.jpg"
+            alt="Project 13"
+            class="rounded-md w-full object-cover mb-4 h-48"
+          />
+          <h2 class="text-lg font-semibold mb-3 text-center">Certificate</h2>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow bg-gray-800 text-white hover:bg-gray-700 transition-all"
+              >Github</a
+            >
+            <a
+              href="#"
+              class="flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border border-gray-800 text-gray-800 hover:bg-gray-100 transition-all"
+              >Live Demo</a
+            >
+          </div>
         </div>
       </div>
     </section>
+    <section
+      id="contact"
+      class="contact-section py-16 px-4 sm:px-8 md:px-16 lg:px-32 bg-white text-center relative"
+    >
+      <!-- Dekorasi pita (5 buah) -->
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-1"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-2"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-3"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-4"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-5"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-6"
+      />
+      <img
+        src="./assets/img/pita1.png"
+        alt="Pita Dekorasi"
+        class="pita pita-7"
+      />
+
+      <div class="contact-content">
+        <p class="text-sm text-gray-500 mb-2">Get in Touch</p>
+        <h1 class="text-3xl font-bold mb-10">Contact Me</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <!-- Email Card -->
+          <div
+            class="flex items-center p-6 border border-gray-300 rounded-2xl shadow-md bg-white gap-4"
+          >
+            <img src="./assets/icon/email.png" alt="Email" class="w-8 h-8" />
+            <a
+              href="mailto:firlypinda02@gmail.com"
+              class="text-base text-blue-600 hover:underline break-all"
+            >
+              firlypinda02@gmail.com
+            </a>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div
+            class="flex items-center p-6 border border-gray-300 rounded-2xl shadow-md bg-white gap-4"
+          >
+            <img
+              src="./assets/icon/linkedin.png"
+              alt="LinkedIn"
+              class="w-8 h-8"
+            />
+            <a
+              href="https://www.linkedin.com/in/syafirli-pindaningtyas-257a46276/"
+              class="text-base text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">

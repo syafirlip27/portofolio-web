@@ -1,5 +1,4 @@
 @media screen and (max-width: 1400px) {
-
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -7,15 +6,20 @@
 
   .about-containers {
     flex-wrap: wrap;
-
   }
 
   #contact,
   #projects {
     height: fit-content;
-
   }
 
+  .ribbon-decor {
+    .ribbon-decor {
+      z-index: -10;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -67,8 +71,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
-
   #contact,
   footer {
     height: 40vh;
@@ -77,10 +79,7 @@
   #profile {
     height: 90vh;
     margin-bottom: 0;
-
-
   }
-  
 
   article {
     font-size: 1rem;
@@ -95,12 +94,10 @@
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
-    
   }
 
   .contact-info-container {
     margin: 0;
-    
   }
 
   .contact-info-container p,
@@ -143,5 +140,15 @@
   }
   #contact {
     margin-top: 25%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pita {
+    width: 80px;
+  }
+  .pita-5 {
+    width: 100px;
   }
 }

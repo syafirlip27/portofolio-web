@@ -2,6 +2,33 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* .btn {
+  @apply flex items-center justify-center px-6 py-2 rounded-full text-sm font-medium shadow border transition-all;
+}
+
+.btn-color-2 {
+  @apply bg-gray-800 text-white hover:bg-gray-700;
+}
+
+.btn-outline {
+  @apply border border-gray-800 text-gray-800 hover:bg-gray-100;
+} */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 * {
   margin: 0;
   width: auto;
@@ -10,11 +37,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  
 }
 
 html {
-
   scroll-behavior: smooth;
 }
 
@@ -179,10 +204,14 @@ section {
   margin: auto 0;
 }
 
+.typing-animation {
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
 .section__text {
   align-self: center;
   text-align: center;
-  
 }
 
 .section__text p {
@@ -191,7 +220,6 @@ section {
 
 .section__text__p1 {
   text-align: center;
-
 }
 
 .section__text__p2 {
@@ -281,14 +309,11 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
- 
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
- 
-
 }
 
 .about-pic {
@@ -326,7 +351,6 @@ section {
 
 #experience {
   position: relative;
-  
 }
 
 .experience-sub-title {
@@ -367,13 +391,9 @@ article .icon {
 #projects {
   position: static;
   flex-direction: column;
-
-  
 }
 .project-details-container {
   justify-content: center;
- 
-  
 }
 .project-containers {
   gap: 2rem;
@@ -384,10 +404,6 @@ article .icon {
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
-
-
-
-
 
 .color-container {
   border-color: rgb(163, 163, 163);
@@ -418,6 +434,68 @@ article .icon {
   flex-direction: column;
   height: 70vh;
   padding-top: 18%;
+}
+
+.contact-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* agar setinggi layar */
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-content {
+  z-index: 1; /* supaya di atas pita */
+}
+
+/* Styling pita */
+.pita {
+  position: absolute;
+  width: 120px;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Posisi 5 pita */
+.pita-1 {
+  top: 20px;
+  left: 30px;
+  transform: rotate(-15deg);
+}
+.pita-2 {
+  top: 20px;
+  right: 30px;
+  transform: rotate(15deg);
+}
+.pita-3 {
+  bottom: 20px;
+  left: 30px;
+  transform: rotate(10deg);
+}
+.pita-4 {
+  bottom: 20px;
+  right: 30px;
+  transform: rotate(-10deg);
+}
+.pita-5 {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg);
+  width: 150px;
+}
+.pita-6 {
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%) rotate(15deg);
+}
+
+.pita-7 {
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%) rotate(15deg);
 }
 
 .contact-info-upper-container {
@@ -456,7 +534,7 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
-  margin-top: 15%;
+  margin-top: 2%;
 }
 
 footer p {
